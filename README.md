@@ -12,6 +12,7 @@
 ## Methodology 🧪
 * The contract indexed by The Graph is [0x794a61358d6845594f94dc1db02a252b5b4814ad](https://miniscan.xyz/?network=arbitrum&address=0x794a61358d6845594f94dc1db02a252b5b4814ad)
 * It was required to calculate the user's net supply of a specific block hourly, however, many blocks may not have Aave lending activity. Then, our approach is to aggregate events like supplies, borrows, repayments, and liquidation between the last block of the last hour and the current block available by the subgraph.
+* We can utilize cron jobs or GitHub Actions to run the Python script hourly automatically
 
 ### Ideas of an optional approach
 Instead of using the supply and withdraw events of the Aave pool contract, we could use the mint and burn event from aTokens and get the borrows, and repays from the pool contract. However, It took one whole day to index all history data of the contract, so using additional contracts like aTokens would take way longer time
