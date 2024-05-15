@@ -10,6 +10,11 @@
 
 
 ## Methodology 🧪
+
+Mathematical formula for Net Supplied Amount:
+`Net Supplied` = sum((`Supply` - `Withdraw` - `LiquidationCall`) - (`Borrow`- `Repay`))
+
+
 * The contract indexed by The Graph is [0x794a61358d6845594f94dc1db02a252b5b4814ad](https://miniscan.xyz/?network=arbitrum&address=0x794a61358d6845594f94dc1db02a252b5b4814ad)
 * It was required to calculate the user's net supply of a specific block hourly, however, many blocks may not have Aave lending activity. Then, our approach is to aggregate events like supplies, borrows, repayments, and liquidation between the last block of the last hour and the current block available by the subgraph.
 * We can utilize cron jobs or GitHub Actions to run the Python script hourly automatically
