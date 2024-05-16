@@ -1,3 +1,5 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
 *.py[cod]
 *$py.class
 
@@ -6,52 +8,24 @@
 
 # Distribution / packaging
 .Python
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-share/python-wheels/
-*.egg-info/
-.installed.cfg
-*.egg
-MANIFEST
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+# If you are using Poetry
+.poetry/
+# If you are using Pipenv
+Pipfile.lock
+# If you are using pyenv
+.python-version
 
-# PyInstaller
-#  Usually these files are written by a python script from a template
-#  before PyInstaller builds the exe, so as to inject date/other infos into it.
-*.manifest
-*.spec
-
-# Installer logs
-pip-log.txt
-pip-delete-this-directory.txt
-
-# Unit test / coverage reports
-htmlcov/
-.tox/
-.nox/
-.coverage
-.coverage.*
-.cache
-nosetests.xml
-coverage.xml
-*.cover
-*.py,cover
-.hypothesis/
-.pytest_cache/
-cover/
-
-# Translations
-*.mo
-*.pot
+# Virtual environments
+.venv/
+venv/
+ENV/
+env.bak/
+venv.bak/
 
 # Django stuff:
 *.log
@@ -68,28 +42,49 @@ instance/
 
 # Sphinx documentation
 docs/_build/
+docs/_site/
+site/
 
-# PyBuilder
-.pybuilder/
-target/
+# PyInstaller
+#  Usually these files are written by a python script from a template
+#  before PyInstaller builds the exe, so as to inject date/other infos into it.
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+coverage.xml
+*.cover
+.hypothesis/
+.cache/
+nosetests.xml
+coverage.json
+.cache/
+pytest_cache/
+
+# Translations
+*.mo
+*.pot
 
 # Jupyter Notebook
 .ipynb_checkpoints
+*.ipynb
 
-	@@ -101,23 +29,6 @@ ipython_config.py
-#   https://python-poetry.org/docs/basic-usage/#commit-your-poetrylock-file-to-version-control
-#poetry.lock
+# IPython
+profile_default/
+ipython_config.py
 
-# pdm
-#   Similar to Pipfile.lock, it is generally recommended to include pdm.lock in version control.
-#pdm.lock
-#   pdm stores project-wide configurations in .pdm.toml, but it is recommended to not include it
-#   in version control.
-#   https://pdm.fming.dev/#use-with-ide
-.pdm.toml
-
-# PEP 582; used by e.g. github.com/David-OConnor/pyflow and github.com/pdm-project/pdm
-__pypackages__/
+# pyenv
+#  For a library or package, you might want to include this file to specify
+#  the Python version required to contribute to the library.
+# .python-version
 
 # Celery stuff
 celerybeat-schedule
@@ -100,37 +95,52 @@ celerybeat.pid
 
 # Environments
 .env
-	@@ -128,33 +39,6 @@ ENV/
-env.bak/
-venv.bak/
+.env.bak
+.env.local
+.env.development
+.env.staging
+.env.production
+.env.test
+# If you use python-decouple, you can also add .env
+.env
 
-# Spyder project settings
-.spyderproject
-.spyproject
+# IDE / Editor
+.idea/
+.vscode/
+*.swp
+*.swo
 
-# Rope project settings
-.ropeproject
+# VS Code
+.vscode/
+.history/
+.vscode/*
+.vscode/settings.json
+.vscode/tasks.json
+.vscode/launch.json
+.vscode/extensions.json
+.vscode/cspell.json
 
-# mkdocs documentation
-/site
+# Pycharm
+.idea/
+.idea/
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/dictionaries
+.idea/vcs.xml
+.idea/shelf/
+.idea/modules.xml
 
-# mypy
-.mypy_cache/
-.dmypy.json
-dmypy.json
+# MacOS
+.DS_Store
 
-# Pyre type checker
-.pyre/
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
 
-# pytype static type analyzer
-.pytype/
-
-# Cython debug symbols
-cython_debug/
-
-# PyCharm
-#  JetBrains specific template is maintained in a separate JetBrains.gitignore that can
-#  be found at https://github.com/github/gitignore/blob/main/Global/JetBrains.gitignore
-#  and can be added to the global gitignore or merged into this file.  For a more nuclear
-#  option (not recommended) you can uncomment the following to ignore the entire idea folder.
-#.idea/
+# Anaconda Distribution
+# To avoid conflict with environment.yml (anaconda) and Pipfile (pipenv)
+# you can name this file as requirements.txt and remove this section.
+.conda/
+*.conda
+*.ipynb
