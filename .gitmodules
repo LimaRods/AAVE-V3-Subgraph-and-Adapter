@@ -1,0 +1,3 @@
+[submodule "aave--pool-v3---arbitrum"]
+	path = aave--pool-v3---arbitrum
+	url = https://github.com/LimaRods/AAVE-V3-Subgraph-and-Adapter/tree/aave--pool-v3---arbitrum
